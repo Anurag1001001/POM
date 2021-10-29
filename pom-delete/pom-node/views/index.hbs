@@ -1,0 +1,19 @@
+<body onload="getToken()">
+    <script type="application/javascript">
+    const teamId = '{{ teamID }}'
+    function getToken () {
+        const link = "https://authorize.music.apple.com/woa?a=" + btoa(getThirdPartyInfo()) + "&app=music&p=subscribe&referrer=" + window.location.href + "/token"
+        window.location.href = link
+    }
+
+    function getThirdPartyInfo () {
+        return JSON.stringify({
+            thirdPartyIconURL: undefined,
+            thirdPartyName: window.location.host,
+            thirdPartyParameters: undefined,
+            thirdPartyToken: '{{devToken.token}}'
+        })
+    }
+
+    </script>
+</body>

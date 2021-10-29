@@ -1,0 +1,16 @@
+<body onload="fetchToken()">
+    {{#unless (showRedirect)}}
+        <h2>Redirecting...</h2>
+    {{/unless}}
+<script type="application/javascript">
+    const teamId = '{{ teamID }}'
+    function fetchToken () {
+        const showRedirect = true
+        const resp = atob(location.hash.substr(1));
+        const respObj = JSON.parse(resp);
+        console.log(respObj)
+        localStorage.setItem("music." + teamId + ".u", respObj.musicUserToken)
+        window.location.href = 'pomapp:/code=' + respObj.musicUserToken
+    }
+</script>
+</body>

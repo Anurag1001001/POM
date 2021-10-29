@@ -1,0 +1,30 @@
+{
+  "name": "pom-algo",
+  "version": "1.0.0",
+  "description": "Algo Implementation for PoM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ultracoolbru/pom-algo.git"
+  },
+  "author": "Shivam Singhal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ultracoolbru/pom-algo/issues"
+  },
+  "homepage": "https://github.com/ultracoolbru/pom-algo#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.2",
+    "elo-rating": "^1.0.1",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "node-cron": "^3.0.0",
+    "node-kmeans": "^1.1.9",
+    "pg": "^8.6.0"
+  }
+}
